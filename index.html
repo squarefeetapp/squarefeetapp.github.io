@@ -41,15 +41,15 @@
             </a>
             <a href="#" class="mobile-menu-toggle"><i class="fa fa-bars"></i></a>
             <span class="menu-items">
-                    <a href="/features">Features</a>
-                    <a href="/pricing">Pricing</a>
-                    <a href="/blog/">Blog</a>
-                    <a href="/docs/">Docs</a>
-                    <a href="/contact">Contact</a>
-                    <span class="extras">
-                        <a href="http://edit-content.com">Login</a>
-                        <a class="signup" href="/signup">Sign up</a>
-                    </span>
+                <a href="/features">Features</a>
+                <a href="/pricing">Pricing</a>
+                <a href="/blog/">Blog</a>
+                <a href="/docs/">Docs</a>
+                <a href="/contact">Contact</a>
+                <span class="extras">
+                    <a href="http://edit-content.com">Login</a>
+                    <a class="signup" href="#signup">Sign up</a>
+                </span>
             </span>
         </nav>
     </header>
@@ -134,31 +134,38 @@
             </div>
         </div>
     </section>
-    
+
     <section>
         <div class="container">
             <div class="col-sm-6 col-sm-offset-3">
-                <h1 id="signup">Sign in with your social account</h1>
-                <span id="signinButton">
-                    <span class="g-signin"
-                          data-callback="signinCallback"
-                          data-clientid="CLIENT_ID"
-                          data-cookiepolicy="single_host_origin"
-                          data-requestvisibleactions="http://schema.org/AddAction"
-                          data-scope="https://www.googleapis.com/auth/plus.login">
-                    </span>
-                </span>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h1 class="has-subtitle" id="signup">Sign up</h1>
+                        <p class="subtitle">Get a Free Account</p>
+                        <form action="http://squarefeet.azurewebsites.net/Account/ExternalLogin" method="post">
+                            <div>
+                                <a href="#" id="GoogleLink">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-google-plus fa-fw fa-stack-1x fa-inverse"></i>
+                                    </span> Sign in with Google
+                                </a>
+                                <button type="submit" id="Google" name="provider" value="Google">Sign in with Google</button>
+                                <script>
+                                    $(function () {
+                                        $('#GoogleLink').click(function (e) {
+                                            e.preventDefault();
+                                            $('#Google').click();
+                                        });
+                                    });
+                                </script>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-
-    <script type="text/javascript">
-    (function () {
-        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-        po.src = 'https://apis.google.com/js/client:plusone.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-    })();
-    </script>
 
     <!-- Footer -->
     <footer>
