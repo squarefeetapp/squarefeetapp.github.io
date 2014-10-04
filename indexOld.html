@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,51 +10,70 @@
     <meta name="author" content="">
 
     <title>squarefeet</title>
-    
-    <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/superhero/bootstrap.min.css" rel="stylesheet">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    
-    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <!-- Bootstrap Core CSS -->
+    <!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
+    <link href="http://www.surrealcms.com/src/style/css/screen.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <!--<link href="css/landing-page.css" rel="stylesheet">-->
+    <!-- Custom Fonts -->
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <script src="http://www.surrealcms.com/src/script/min/surreal.min.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
 </head>
+
 <body>
-    <div class="navbar navbar-default navbar-fixed-top">
+
+    <!-- Navigation -->
+    <header>
+        <nav class="container">
+            <a class="navbar-brand" href="#">
+                squarefeet
+            </a>
+            <a href="#" class="mobile-menu-toggle"><i class="fa fa-bars"></i></a>
+            <span class="menu-items">
+                <a href="/features">Features</a>
+                <a href="/pricing">Pricing</a>
+                <a href="/blog/">Blog</a>
+                <a href="/docs/">Docs</a>
+                <a href="/contact">Contact</a>
+                <span class="extras">
+                    <a href="http://edit-content.com">Login</a>
+                    <a class="signup" href="#signup">Sign up</a>
+                </span>
+            </span>
+        </nav>
+    </header>
+    <section class="dark">
         <div class="container">
-            <div class="navbar-header">
-                <a href="../" class="navbar-brand">Bootswatch</a>
-                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="navbar-collapse collapse" id="navbar-main">
-                <ul class="nav navbar-nav"></ul>
-                <ul class="nav navbar-nav navbar-right"></ul>
-            </div>
-        </div>
-    </div>
-    <section class="jumbotron  text-center">
-        <div class="container">
-            <h2>Manage your Home Purchase Experience</h2>
-            <p>The solution to track and manage your home purchasing experience</p>
-            <div class="row">
+            <h1 class="has-subtitle">Take control of your home purchase experience</h1>
+            <p class="subtitle">The solution to track and manage your home purchasing experience</p>
+            <div class="row text-center">
                 <div class="col-sm-4">
-                    <span class="img-circle circle-lg circle-blue">
-                        <i class="fa fa-list fa-lg"></i>
+                    <span class="circle circle-lg circle-blue">
+                        <i class="fa fa-list"></i>
                     </span>
                     <h4>Track your prospective homes</h4>
                     <p>Keep an inventory of your potential purchases in your profile</p>
                 </div>
                 <div class="col-sm-4">
-                    <span class="img-circle circle-lg circle-green">
+                    <span class="circle circle-lg circle-green">
                         <i class="fa fa-home"></i>
                     </span>
                     <h4>View upcoming open houses</h4>
                     <p>Quickly see a list of available open houses</p>
                 </div>
                 <div class="col-sm-4">
-                    <span class="img-circle circle-lg circle-orange">
+                    <span class="circle circle-lg circle-orange">
                         <i class="fa fa-pencil"></i>
                     </span>
                     <h4>Make notes on your home showings</h4>
@@ -66,8 +86,12 @@
             </div>
         </div>
     </section>
+    <!-- /.intro-header -->
+    <!-- Page Content -->
+
     <section>
         <div class="container">
+
             <div class="row">
                 <div class="col-lg-5 col-sm-6">
                     <hr class="section-heading-spacer">
@@ -82,6 +106,7 @@
 
         </div>
     </section>
+
     <section class="light">
         <div class="container">
             <h1>Mobile-friendly design</h1>
@@ -109,39 +134,40 @@
             </div>
         </div>
     </section>
+
     <section>
         <div class="container">
-            <div class="row">
-                <div class="col-sm-6 col-sm-offset-3">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <h1 class="has-subtitle" id="signup">Sign up</h1>
-                            <p class="subtitle">Get a Free Account</p>
-                            <form action="http://squarefeet.azurewebsites.net/Account/ExternalLogin" method="post">
-                                <div>
-                                    <a href="#" id="GoogleLink">
-                                        <span class="fa-stack fa-lg">
-                                            <i class="fa fa-circle fa-stack-2x"></i>
-                                            <i class="fa fa-google-plus fa-fw fa-stack-1x fa-inverse"></i>
-                                        </span> Sign in with Google
-                                    </a>
-                                    <button type="submit" id="Google" name="provider" value="Google">Sign in with Google</button>
-                                    <script>
-                                        $(function () {
-                                            $('#GoogleLink').click(function (e) {
-                                                e.preventDefault();
-                                                $('#Google').click();
-                                            });
+            <div class="col-sm-6 col-sm-offset-3">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h1 class="has-subtitle" id="signup">Sign up</h1>
+                        <p class="subtitle">Get a Free Account</p>
+                        <form action="http://squarefeet.azurewebsites.net/Account/ExternalLogin" method="post">
+                            <div>
+                                <a href="#" id="GoogleLink">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-google-plus fa-fw fa-stack-1x fa-inverse"></i>
+                                    </span> Sign in with Google
+                                </a>
+                                <button type="submit" id="Google" name="provider" value="Google">Sign in with Google</button>
+                                <script>
+                                    $(function () {
+                                        $('#GoogleLink').click(function (e) {
+                                            e.preventDefault();
+                                            $('#Google').click();
                                         });
-                                    </script>
-                                </div>
-                            </form>
-                        </div>
+                                    });
+                                </script>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="row">
@@ -168,5 +194,13 @@
             </div>
         </div>
     </footer>
+
+    <!-- jQuery Version 1.11.0 -->
+    <script src="js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
 </body>
+
 </html>
