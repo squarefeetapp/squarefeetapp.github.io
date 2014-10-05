@@ -1,0 +1,98 @@
+﻿@header-background: #243647;
+@header-color: #5983ab;
+@section-margin: 80px;
+
+.section-spacing() {
+    padding-top: @section-margin;
+    padding-bottom: @section-margin;
+    margin: 0;
+}
+
+body {
+    padding-top: 40px;
+    background: url(http://subtlepatterns.com/patterns/seamless_paper_texture.png);
+}
+
+h4 {
+    line-height: 150%;
+}
+ h2 {
+     line-height: 150%;
+ }
+section, section.light, section.page-header, footer {
+    .section-spacing();
+
+    &.light {
+        background: white;
+    }
+}
+
+.img-circle {
+    width: 140px;
+    height: 140px;
+    display: inline-block;
+    font-size: 70px;
+    line-height: 140px;
+}
+
+.img-circle-1 {
+    color: #355069;
+    background: #5983ab;
+}
+
+.img-circle-2 {
+    color: #5e6d3b;
+    background: #95ab63;
+}
+
+.img-circle-3 {
+    color: #946925;
+    background: #d39e4c;
+}
+
+.navbar.navbar-default {
+    background: @header-background;
+    border-bottom: none;
+
+    .navbar-brand {
+        font-size: 25px;
+        background: url('../img/logo-solid.png') no-repeat;
+        background-size: 30px;
+        min-height: 59px;
+        min-width: 20px;
+        display: block;
+        background-position-y: 14px;
+        padding-left: 35px;
+    }
+
+    .navbar-nav {
+        > li {
+            > a:hover, > a:focus {
+                color: @header-color;
+                background: none;
+            }
+        }
+    }
+}
+
+.page-header {
+    color: @header-color;
+    background: @header-background;
+
+    .row {
+        margin-bottom: @section-margin;
+    }
+
+    h1 {
+        font-weight: 500;
+        color: white;
+    }
+
+    h3 {
+        color: white;
+    }
+
+    h4 {
+        color: #5983ab;
+    }
+}
