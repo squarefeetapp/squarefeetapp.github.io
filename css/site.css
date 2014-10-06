@@ -46,14 +46,15 @@ footer.light {
   border-bottom: none;
 }
 .navbar.navbar-default .navbar-brand {
+  font-weight: bold;
   font-size: 25px;
   background: url('../img/logo-solid.png') no-repeat;
   background-size: 30px;
-  min-height: 59px;
+  min-height: 50px;
   min-width: 20px;
   display: block;
-  background-position-y: 14px;
-  padding-left: 35px;
+  background-position-y: 10px;
+  padding: 13px 0 0 35px;
 }
 .navbar.navbar-default .navbar-nav > li > a:hover,
 .navbar.navbar-default .navbar-nav > li > a:focus {
